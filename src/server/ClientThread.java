@@ -10,6 +10,9 @@ import java.net.Socket;
 
 import post.shared.*;
 
+/*
+	The tread for eatch client which is connected
+*/
 
 public class ClientThread implements Runnable{
 
@@ -64,7 +67,9 @@ public class ClientThread implements Runnable{
 
 	}
 
-
+/*
+	Brodcast data to the cleint.
+*/
 	public boolean brodcast(GameObject outGoing){
 		if(!socket.isConnected()){
 			return false;

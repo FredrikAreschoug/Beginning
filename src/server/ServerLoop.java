@@ -2,6 +2,10 @@ package post.server;
 
 import post.shared.*;
 
+/*
+	Controlls players and outher entitys
+	right now really simple just to see everything is working 
+*/
 
 public class ServerLoop implements Runnable{
 

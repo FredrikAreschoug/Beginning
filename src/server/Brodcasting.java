@@ -4,12 +4,18 @@ package post.server;
 import post.shared.GameObject;
 import post.shared.GamePlayer;
 
+/*
+	Brodcast data to clients
+*/
+
 public class Brodcasting implements Runnable {
 
 	public Brodcasting() {
 
 	}
-
+/*
+	Checks if player is close enough to get update 
+*/
 	public void update(float x,float y, GamePlayer outGoing){
 		for(int i = 0; i < Server.server.clientList.size(); i++){
 			if (outGoing.getId() != Server.server.clientList.get(i).gamePlayer.getId()){
@@ -32,6 +38,9 @@ public class Brodcasting implements Runnable {
 		}
 	}
 
+/*
+	Loops to send out data to all nearby clients.
+*/
 	@Override
 	public void run() {
 
